@@ -3,38 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xuanwen Zhu</title>
   <meta name="description"
         content="Xuanwen Zhu - Undergraduate researcher interested in data agents, persistent memory, and LLM systems.">
+  <title>Xuanwen Zhu | Research Homepage</title>
 
   <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1769aa;
+      --teal: #0f766e;
+      --gold: #c47f17;
+      --text: #243b53;
+      --muted: #627d98;
+      --line: #d9e2ec;
+      --bg: #f5f8fb;
+      --card: rgba(255, 255, 255, 0.92);
+      --shadow: 0 16px 40px rgba(16, 42, 67, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
       line-height: 1.7;
-      color: #222;
-      background: #ffffff;
-    }
-
-    h1 {
-      margin-bottom: 8px;
-      font-size: 36px;
-    }
-
-    h2 {
-      margin-top: 36px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-    }
-
-    h3 {
-      margin-bottom: 4px;
+      background:
+        radial-gradient(circle at top right, #e7f3f7 0, transparent 32rem),
+        var(--bg);
     }
 
     a {
-      color: #1769aa;
+      color: var(--blue);
       text-decoration: none;
     }
 
@@ -42,125 +49,540 @@
       text-decoration: underline;
     }
 
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--teal);
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+      align-items: center;
+      padding: 70px 0 80px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+
     .subtitle {
-      color: #666;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .intro {
+      max-width: 690px;
+      margin: 22px 0 0;
+      font-size: 17px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .button.primary {
+      color: white;
+      border-color: var(--navy);
+      background: var(--navy);
+    }
+
+    .hero-card {
+      padding: 28px;
+      border: 1px solid rgba(217, 226, 236, 0.9);
+      border-radius: 24px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
       font-size: 18px;
     }
 
-    .contact {
-      margin-top: 16px;
+    .quick-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .quick-item:last-child {
+      border-bottom: 0;
+    }
+
+    .quick-item strong {
+      color: var(--navy);
+    }
+
+    section {
+      padding: 30px 0 72px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading p {
+      max-width: 540px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .interest-grid,
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .interest-card,
+    .award-card,
+    .project-card,
+    .experience-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.04);
+    }
+
+    .interest-card h3,
+    .award-card h3,
+    .project-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+    }
+
+    .interest-card p,
+    .award-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+    }
+
+    .experience-label {
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    .experience-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 23px;
+    }
+
+    .experience-card ul,
+    .award-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .experience-card li,
+    .award-card li {
+      margin: 8px 0;
+    }
+
+    .award-card.featured {
+      border-top: 4px solid var(--gold);
+    }
+
+    .award-type {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .award-card ul {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .award-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .project-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .project-link {
+      flex-shrink: 0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: white;
+      background: var(--teal);
+      font-weight: 700;
     }
 
     footer {
-      margin-top: 48px;
-      color: #777;
+      padding: 30px 0 48px;
+      color: var(--muted);
       font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .section-heading,
+      .project-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero,
+      .experience-card {
+        grid-template-columns: 1fr;
+      }
+
+      .interest-grid,
+      .award-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Xuanwen Zhu</h1>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="#top">Xuanwen <span>Zhu</span></a>
 
-    <p class="subtitle">
-      Undergraduate Student · Information and Computing Science · Wuhan University of Technology
-    </p>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <p class="contact">
-      <a href="mailto:CruiseY2005@outlook.com">Email</a>
-      ·
-      <a href="https://gitcode.com/CJMP/VibeCoding/tree/main">
-        CJMP/VibeCoding
-      </a>
-    </p>
-  </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Undergraduate Researcher</p>
 
-  <section>
-    <h2>About</h2>
+          <h1>Xuanwen Zhu</h1>
 
-    <p>
-      I am a third-year undergraduate student majoring in Information and
-      Computing Science at Wuhan University of Technology, expecting to
-      graduate in 2028.
-    </p>
+          <p class="subtitle">
+            Information and Computing Science · Wuhan University of Technology
+          </p>
 
-    <p>
-      I am interested in building reliable agent systems and contributing to
-      research projects involving long-horizon tasks, data systems, and
-      software engineering.
-    </p>
-  </section>
+          <p class="intro">
+            I am interested in data agents, persistent memory for long-horizon
+            tasks, vector-database infrastructure, and reliable LLM-based
+            software engineering systems.
+          </p>
 
-  <section>
-    <h2>Research Interests</h2>
+          <div class="actions">
+            <a class="button primary"
+               href="mailto:YOUR_EMAIL@example.com">
+              Email me
+            </a>
 
-    <ul>
-      <li>Data agents and agentic data systems</li>
-      <li>Persistent memory for long-horizon agents</li>
-      <li>Retrieval and vector-database components for agent systems</li>
-      <li>LLM-based software engineering and code agents</li>
-      <li>Agent evaluation, tool use, and error recovery</li>
-    </ul>
-  </section>
+            <a class="button"
+               href="https://gitcode.com/CJMP/VibeCoding/tree/main"
+               target="_blank">
+              View project
+            </a>
+          </div>
+        </div>
 
-  <section>
-    <h2>Experience</h2>
+        <aside class="hero-card">
+          <h2>Quick profile</h2>
 
-    <h3>Huawei Internship</h3>
+          <div class="quick-item">
+            <span>Expected graduation</span>
+            <strong>2028</strong>
+          </div>
 
-    <ul>
-      <li>
-        Contributed to the open-source CJMP/VibeCoding framework.
-      </li>
-      <li>
-        Implemented Skills for Keels templates and maintained template tests.
-      </li>
-      <li>
-        Improved CJ-UI Skills and developed tests for long-task generation.
-      </li>
-      <li>
-        Worked directly on optimizing the framework's vector-database component.
-      </li>
-      <li>
-        Built and tested a HarmonyOS mobile entry point.
-      </li>
-    </ul>
+          <div class="quick-item">
+            <span>Primary languages</span>
+            <strong>C/C++ · Python</strong>
+          </div>
 
-    <p>
-      Project:
-      <a href="https://gitcode.com/CJMP/VibeCoding/tree/main">
-        CJMP/VibeCoding
-      </a>
-    </p>
-  </section>
+          <div class="quick-item">
+            <span>Research availability</span>
+            <strong>18+ months</strong>
+          </div>
 
-  <section>
-    <h2>Selected Awards</h2>
+          <div class="quick-item">
+            <span>Major strength</span>
+            <strong>Algorithms & systems</strong>
+          </div>
+        </aside>
+      </section>
 
-    <ul>
-      <li>ICPC and CCPC competition awards</li>
-      <li>Algorithmic and mathematical modeling competition awards</li>
-      <li>Huawei Software Challenge regional awards</li>
-    </ul>
+      <section id="research">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Research interests</p>
+            <h2>Building agents that work over time</h2>
+          </div>
 
-    <p>
-      Please replace the descriptions above with the exact official English
-      names shown on your certificates or competition websites.
-    </p>
-  </section>
+          <p>
+            My current interests connect agent reasoning with data systems,
+            memory, retrieval, and reliable software execution.
+          </p>
+        </div>
 
-  <section>
-    <h2>Technical Skills</h2>
+        <div class="interest-grid">
+          <article class="interest-card">
+            <h3>Data Agents</h3>
+            <p>
+              Agents for multi-step data workflows, retrieval, verification,
+              and interaction with databases.
+            </p>
+          </article>
 
-    <p>
-      C/C++, Python, algorithmic programming, software testing, debugging,
-      vector-database-related engineering, LLM and agent tools
-    </p>
-  </section>
+          <article class="interest-card">
+            <h3>Persistent Memory</h3>
+            <p>
+              Memory and state management for long-horizon tasks, including
+              updating, reusing, and validating past information.
+            </p>
+          </article>
 
-  <footer>
-    Last updated: October 2026
-  </footer>
+          <article class="interest-card">
+            <h3>Reliable Code Agents</h3>
+            <p>
+              Code generation, testing, debugging, repair, tool use, and
+              recovery from failures.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Engineering experience</h2>
+          </div>
+        </div>
+
+        <article class="experience-card">
+          <div class="experience-label">
+            Huawei Internship
+          </div>
+
+          <div>
+            <h3>CJMP / VibeCoding Framework</h3>
+
+            <ul>
+              <li>
+                Contributed to the open-source CJMP/VibeCoding framework.
+              </li>
+              <li>
+                Implemented Skills for Keels templates and maintained template tests.
+              </li>
+              <li>
+                Improved CJ-UI Skills and developed tests for long-task generation.
+              </li>
+              <li>
+                Worked directly on optimizing the framework's
+                <strong>vector-database component</strong>.
+              </li>
+              <li>
+                Built and tested a HarmonyOS mobile entry point.
+              </li>
+            </ul>
+
+            <p>
+              <a href="https://gitcode.com/CJMP/VibeCoding/tree/main"
+                 target="_blank">
+                View CJMP/VibeCoding on GitCode →
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section id="awards">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected awards</p>
+            <h2>Algorithmic and engineering achievements</h2>
+          </div>
+
+          <p>
+            My competition background reflects strong algorithmic reasoning,
+            implementation ability, and experience working under time pressure.
+          </p>
+        </div>
+
+        <div class="award-grid">
+          <article class="award-card featured">
+            <span class="award-type">Competitive programming</span>
+            <h3>ICPC / CCPC</h3>
+
+            <ul>
+              <li>ICPC Asia Regional Contest — Gold Medal</li>
+              <li>CCPC Final — Silver Medal</li>
+              <li>ICPC Asia Regional Contest — Bronze Medal</li>
+              <li>ICPC Invitational — Third Place</li>
+            </ul>
+          </article>
+
+          <article class="award-card featured">
+            <span class="award-type">Engineering competitions</span>
+            <h3>Huawei Software Challenge</h3>
+
+            <ul>
+              <li>Regional Second Prize, Hubei–Hunan Division</li>
+              <li>Regional Third Prize, Hubei–Hunan Division</li>
+            </ul>
+
+            <p>
+              These projects involved algorithm design, implementation,
+              optimization, and debugging of practical software systems.
+            </p>
+          </article>
+
+          <article class="award-card featured">
+            <span class="award-type">Other achievements</span>
+            <h3>Algorithm and modeling</h3>
+
+            <ul>
+              <li>GPLT — National First Prize</li>
+              <li>AI Algorithm Peak Competition — National Second Prize</li>
+              <li>Statistical Modeling Competition — Provincial Second Prize</li>
+              <li>CACC — Provincial Second Prize</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="award-note">
+          Official event names, years, divisions, and the exact meaning of
+          “Final” or “Regional” should be checked against certificates before
+          publication.
+        </p>
+      </section>
+
+      <section id="contact">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Open to long-term research collaboration</h2>
+          </div>
+        </div>
+
+        <article class="project-card">
+          <div>
+            <h3>Research interests and availability</h3>
+            <p>
+              I can start once arrangements are confirmed, contribute more than
+              30 hours per week during term time, and work full-time during
+              academic breaks.
+            </p>
+          </div>
+
+          <a class="project-link"
+             href="mailto:CruiseY2005@outlook.com">
+            Get in touch
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Xuanwen Zhu · Last updated October 2026
+    </footer>
+  </div>
 </body>
 </html>
