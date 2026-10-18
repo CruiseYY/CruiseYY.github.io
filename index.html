@@ -102,8 +102,6 @@
     .course { display: flex; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 13px; }
     .course span:last-child { color: var(--navy); font-weight: 750; }
 
-    .language-line { margin: 0; padding: 15px 18px; border-radius: 12px; color: var(--navy); background: var(--soft-blue); font-size: 14px; font-weight: 750; }
-
     footer { padding: 4px 0 42px; color: var(--muted); font-size: 12.5px; text-align: center; }
     .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; }
     footer a { color: var(--blue); font-weight: 700; }
@@ -149,10 +147,10 @@
       <div class="hero-profile">
         <img class="profile-photo" src="profile-photo.jpg" alt="Portrait of Xuanwen Zhu" width="148" height="148">
         <aside class="snapshot" aria-label="Profile snapshot">
-          <p class="snapshot-label">Profile</p>
+          <p class="snapshot-label">At a glance</p>
           <div class="snapshot-row"><strong>3.611</strong><span>Cumulative GPA<br>(5.0-scale)</span></div>
           <div class="snapshot-row"><strong>2028</strong><span>Expected graduation</span></div>
-          <div class="snapshot-row"><strong>C/C++</strong><span>Competitive programming</span></div>
+          <div class="snapshot-row"><strong>C/C++/Python</strong><span>Programming languages</span></div>
         </aside>
       </div>
     </div>
@@ -187,8 +185,8 @@
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">AI4Science research project</h3><span class="entry-meta">Wuhan University of Technology · Apr 2026 - Sep 2026</span></div>
           <ul>
-            <li>Developed project code and trained a deep-learning mixture-of-experts (MoE) model for subsurface pressure prediction.</li>
-            <li>Contributed to a patent application; supporting documents are included with the accompanying materials.</li>
+            <li>Implemented project code and conducted deep-learning model training for subsurface pressure prediction using a mixture-of-experts (MoE) approach.</li>
+            <li>Contributed to the patent application; supporting patent materials are included as an attachment.</li>
           </ul>
         </article>
       </div>
@@ -202,27 +200,33 @@
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">Enterprise database LLM deployment</h3><span class="entry-meta">Research group–enterprise collaboration · Apr 2026 - Present</span></div>
           <ul>
-            <li>Collaborating with an enterprise partner to deploy a database-oriented large language model in its private intranet.</li>
+            <li>Built an end-to-end LLM workflow with Dify for a database-focused system deployed in the enterprise's private intranet.</li>
+            <li>Implemented tiered user management and permission-aware LLM processing across databases with different access levels.</li>
+            <li>Developed a backend user-management system and integrated web search and personal knowledge-base features.</li>
           </ul>
         </article>
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">Huawei Technologies</h3><span class="entry-meta">Software engineering internship</span></div>
           <ul>
-            <li>Contributed to the open-source CJMP / VibeCoding framework through Skills implementation, template testing, and long-horizon task generation tests.</li>
-            <li>Contributed to a HarmonyOS mobile entry point.</li>
+            <li>Focused on VibeCoding development within the CJMP framework, modifying Skills related to CJ-UI.</li>
+            <li>Completed testing and improvements for template task generation, and authored Keels template-generation Skills.</li>
+            <li>Optimized and tested model generation for long-running tasks.</li>
           </ul>
           <p class="section-note">Project repository: <a href="https://gitcode.com/CJMP/VibeCoding/tree/main">CJMP / VibeCoding</a></p>
         </article>
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">Vector Database System Acceleration</h3><span class="entry-meta">Huawei Technologies · Engineering project</span></div>
           <ul>
-            <li>Optimized the system-acceleration module of a vector database to improve system performance.</li>
+            <li>Optimized the vector database's system-acceleration module, more than doubling HNSW index construction speed.</li>
+            <li>Built and tested a HarmonyOS mobile interface for the vector database.</li>
           </ul>
         </article>
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">Disk Storage and Retrieval Project</h3><span class="entry-meta">Huawei Challenge</span></div>
           <ul>
-            <li>Optimized the read strategy, increasing the project's read score by 23%.</li>
+            <li>Applied hot/cold data partitioning to the storage component.</li>
+            <li>Designed a cost-aware dynamic programming strategy for reads, paired with a greedy policy to skip unnecessary or low-value queries.</li>
+            <li>Improved the challenge score by 23% through the storage and retrieval optimizations.</li>
           </ul>
         </article>
       </div>
@@ -268,13 +272,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-heading">
-        <div><p class="section-kicker">06 / Technical profile</p><h2>Technical profile</h2></div>
-      </div>
-      <p class="language-line">C/C++/Python</p>
     </section>
   </main>
 
