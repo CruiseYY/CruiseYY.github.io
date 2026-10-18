@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Xuanwen Zhu — undergraduate researcher working on data agents, agent memory, LLM systems, and AI for Science.">
+  <meta name="description" content="Xuanwen Zhu — undergraduate student in Information and Computing Science at Wuhan University of Technology.">
   <meta name="theme-color" content="#13263d">
-  <title>Xuanwen Zhu | Data Agents and AI Systems</title>
+  <title>Xuanwen Zhu | Undergraduate Profile</title>
   <style>
     :root {
       color-scheme: light;
@@ -81,6 +81,11 @@
     h2 { margin: 0; color: var(--navy); font-size: 25px; line-height: 1.15; letter-spacing: -.035em; }
     .section-note { margin: 0; color: var(--muted); font-size: 13px; }
 
+    .info-card { padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, #fff, #f8fbfe); }
+    .info-card h3 { margin: 0 0 9px; color: var(--navy); font-size: 16px; }
+    .info-card p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.75; }
+    .award-column .section-kicker { margin-bottom: 10px; }
+
     .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .focus-card { padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, #fff, #f8fbfe); }
     .focus-card:nth-child(2) { background: linear-gradient(180deg, #fff, var(--soft-teal)); }
@@ -138,10 +143,12 @@
 <body>
   <header class="topbar">
     <div class="shell topbar-inner">
-      <a class="brand" href="#top">Xuanwen Zhu<span>Undergraduate researcher · Wuhan University of Technology</span></a>
+      <a class="brand" href="#top">Xuanwen Zhu<span>Undergraduate student · Wuhan University of Technology</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#focus">Research focus</a>
+        <a href="#profile">Profile</a>
+        <a href="#research">Research</a>
         <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -151,10 +158,10 @@
   <section class="hero" id="top">
     <div class="shell hero-grid">
       <div>
-        <p class="eyebrow">Data agents · LLM systems · AI for Science</p>
+        <p class="eyebrow">UNDERGRADUATE · PROGRAMMING · AI SYSTEMS</p>
         <h1>Xuanwen Zhu</h1>
         <p class="hero-subtitle">B.S. student in Information and Computing Science · Wuhan University of Technology · Expected 2028</p>
-        <p class="hero-copy">I study and build data-oriented AI systems. My current interests are data agents, persistent memory, reliable tool use, and AI for Science, with hands-on experience in deep learning, database LLM deployment, and software engineering.</p>
+        <p class="hero-copy">I am an undergraduate student in Information and Computing Science at Wuhan University of Technology. My background includes AI4Science research, enterprise database LLM deployment, software engineering projects, and competitive programming.</p>
         <div class="hero-actions">
           <a class="button primary" href="mailto:cruisey2005@outlook.com">Email me</a>
           <a class="button" href="https://github.com/CruiseYY">GitHub profile</a>
@@ -165,38 +172,38 @@
         <aside class="snapshot" aria-label="Profile snapshot">
           <p class="snapshot-label">At a glance</p>
           <div class="snapshot-row"><strong>3.611</strong><span>Cumulative GPA<br>(5.0-scale)</span></div>
-          <div class="snapshot-row"><strong>4</strong><span>Selected ICPC / CCPC awards</span></div>
-          <div class="snapshot-row"><strong>2026</strong><span>Research and industry projects</span></div>
+          <div class="snapshot-row"><strong>2028</strong><span>Expected graduation</span></div>
+          <div class="snapshot-row"><strong>C/C++</strong><span>Competitive programming</span></div>
         </aside>
       </div>
     </div>
   </section>
 
   <main class="shell">
-    <section class="section" id="focus">
+    <section class="section" id="profile">
       <div class="section-heading">
-        <div><p class="section-kicker">01 / Research focus</p><h2>Questions I want to work on</h2></div>
-        <p class="section-note">A focused profile for research collaboration</p>
+        <div><p class="section-kicker">01 / Personal information</p><h2>Education and academic record</h2></div>
       </div>
-      <div class="focus-grid">
-        <article class="focus-card">
-          <h3>Data agents and memory</h3>
-          <p>How can an agent retain task state, retrieve useful history, and use past execution feedback to support reliable, long-horizon data analysis?</p>
-        </article>
-        <article class="focus-card">
-          <h3>AI for Science</h3>
-          <p>Deep-learning methods for scientific prediction, including mixture-of-experts models and data-driven modeling of physical systems.</p>
-        </article>
-        <article class="focus-card">
-          <h3>LLM systems for data</h3>
-          <p>Database-oriented LLM deployment, vector-database components, tool use, testing, and execution workflows for practical data systems.</p>
-        </article>
+      <div class="two-col">
+        <div class="info-card">
+          <h3>Education</h3>
+          <p>Wuhan University of Technology<br>B.S. in Information and Computing Science<br>Expected graduation: 2028<br>Cumulative GPA: <strong>3.611 / 5.0</strong></p>
+        </div>
+        <div class="info-card">
+          <h3>Selected coursework</h3>
+          <div class="course-list" aria-label="Selected coursework">
+            <div class="course"><span>C Programming Fundamentals A</span><span>98.8</span></div>
+            <div class="course"><span>C Programming Comprehensive Experiment A</span><span>100</span></div>
+            <div class="course"><span>Beidou Innovation Design and Machine Learning</span><span>92.5</span></div>
+            <div class="course"><span>Data Structures and Algorithms B</span><span>87.5</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="experience">
+    <section class="section" id="research">
       <div class="section-heading">
-        <div><p class="section-kicker">02 / Experience</p><h2>Research and engineering</h2></div>
+        <div><p class="section-kicker">02 / Research experience</p><h2>Research projects</h2></div>
       </div>
       <div class="experience">
         <article class="entry">
@@ -206,6 +213,14 @@
             <li>Produced project code and contributed to a patent draft; details are omitted pending disclosure.</li>
           </ul>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <div><p class="section-kicker">03 / Internships and projects</p><h2>Engineering experience</h2></div>
+      </div>
+      <div class="experience">
         <article class="entry">
           <div class="entry-head"><h3 class="entry-title">Enterprise database LLM deployment</h3><span class="entry-meta">Industry collaboration · Apr 2026 - Present</span></div>
           <ul>
@@ -227,54 +242,60 @@
 
     <section class="section" id="leadership">
       <div class="section-heading">
-        <div><p class="section-kicker">03 / Leadership</p><h2>Community and service</h2></div>
+        <div><p class="section-kicker">04 / Leadership and service</p><h2>Community involvement</h2></div>
       </div>
       <article class="entry">
         <div class="entry-head"><h3 class="entry-title">President, Algorithm Association</h3><span class="entry-meta">Wuhan University of Technology · Apr 2026 - Present</span></div>
         <ul>
           <li>Lead programming activities and coordinate problem setting and review for university and Wuhan-area contests.</li>
-          <li>Led one campus contest and a Wuhan joint freshman contest, organized Wuhan joint training and selection, and reviewed problems for the Wuhan regional contest.</li>
+          <li>Led campus and Wuhan joint contests, organized joint training and selection, and reviewed problems for the Wuhan regional contest.</li>
         </ul>
       </article>
     </section>
 
     <section class="section" id="awards">
       <div class="section-heading">
-        <div><p class="section-kicker">04 / Selected evidence</p><h2>Awards and academic preparation</h2></div>
-        <p class="section-note">Certificates and transcript available upon request</p>
+        <div><p class="section-kicker">05 / Competition awards</p><h2>Selected results</h2></div>
+        <p class="section-note">Certificates available upon request</p>
       </div>
       <div class="two-col">
-        <div class="award-list">
-          <div class="award"><strong>2025 ICPC Asia Wuhan Regional Contest</strong><span>Gold Medal</span></div>
-          <div class="award"><strong>2025 China Collegiate Programming Contest Finals</strong><span>Silver Medal</span></div>
-          <div class="award"><strong>2026 ICPC China Hubei Provincial Programming Contest</strong><span>1st Place</span></div>
-          <div class="award"><strong>2026 ICPC China Wuhan National Invitational Programming Contest</strong><span>3rd Place</span></div>
+        <div class="award-column">
+          <p class="section-kicker">ICPC / CCPC highlights</p>
+          <div class="award-list">
+            <div class="award"><strong>ICPC Asia Regional Contests</strong><span>2 Gold · 2 Silver</span></div>
+            <div class="award"><strong>ICPC Invitational Contests</strong><span>2 Gold</span></div>
+            <div class="award"><strong>China Collegiate Programming Contest Finals</strong><span>Silver Medal</span></div>
+            <div class="award"><strong>ICPC China Hubei Provincial Programming Contest</strong><span>1st Place</span></div>
+            <div class="award"><strong>ICPC China Wuhan National Invitational Programming Contest</strong><span>3rd Place</span></div>
+          </div>
         </div>
-        <div class="course-list" aria-label="Selected coursework">
-          <div class="course"><span>C Programming Fundamentals A</span><span>98.8</span></div>
-          <div class="course"><span>Computer Fundamentals and C Programming Comprehensive Experiment A</span><span>100</span></div>
-          <div class="course"><span>Advanced Algebra A1</span><span>95.36</span></div>
-          <div class="course"><span>Mathematical Modeling B</span><span>94.0</span></div>
-          <div class="course"><span>Beidou Innovation Design and Machine Learning</span><span>92.5</span></div>
-          <div class="course"><span>Data Structures and Algorithms B</span><span>87.5</span></div>
+        <div class="award-column">
+          <p class="section-kicker">Other selected awards</p>
+          <div class="award-list">
+            <div class="award"><strong>Huawei Software Challenge · Hubei–Hunan Division</strong><span>Regional 2nd &amp; 3rd</span></div>
+            <div class="award"><strong>Group Programming Ladder Tournament (GPLT)</strong><span>National 1st</span></div>
+            <div class="award"><strong>AI Algorithm Peak Competition</strong><span>National 2nd</span></div>
+            <div class="award"><strong>Statistical Modeling Competition</strong><span>Provincial 2nd</span></div>
+            <div class="award"><strong>CACC</strong><span>Provincial 2nd</span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="skills">
       <div class="section-heading">
-        <div><p class="section-kicker">05 / Technical profile</p><h2>Tools I use</h2></div>
+        <div><p class="section-kicker">06 / Technical profile</p><h2>Tools I use</h2></div>
       </div>
       <div class="skills">
         <div class="skill"><strong>Programming</strong><span>C/C++, Python</span></div>
-        <div class="skill"><strong>AI and systems</strong><span>Deep learning, mixture-of-experts, LLM systems, data agents, vector databases</span></div>
+        <div class="skill"><strong>AI and systems</strong><span>Deep learning, mixture-of-experts, LLM systems, vector databases</span></div>
         <div class="skill"><strong>Engineering</strong><span>Git, Linux, testing, debugging, and working in existing codebases</span></div>
       </div>
     </section>
   </main>
 
   <footer id="contact">
-    <div class="shell">Open to undergraduate research opportunities in data agents, LLM systems, and AI for Science · <a href="mailto:cruisey2005@outlook.com">cruisey2005@outlook.com</a></div>
+    <div class="shell">Contact · <a href="mailto:cruisey2005@outlook.com">cruisey2005@outlook.com</a></div>
   </footer>
 </body>
 </html>
