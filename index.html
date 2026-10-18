@@ -59,10 +59,15 @@
     h1 { margin: 0; max-width: 780px; font-size: clamp(38px, 6vw, 68px); line-height: 1.02; letter-spacing: -0.055em; font-weight: 770; }
     .hero-subtitle { margin: 17px 0 0; color: #d8e8f1; font-size: 17px; }
     .hero-copy { max-width: 680px; margin: 20px 0 0; color: #e7f0f5; font-size: 17px; line-height: 1.72; }
-    .hero-profile { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-    .profile-photo { width: 148px; height: 148px; object-fit: cover; border: 4px solid rgba(255,255,255,.84); border-radius: 50%; box-shadow: 0 14px 30px rgba(5, 22, 40, .24); }
-    .snapshot { width: 100%; padding: 22px; border: 1px solid rgba(255,255,255,.2); border-radius: 18px; background: rgba(7, 26, 46, .24); backdrop-filter: blur(8px); }
-    .snapshot-label { margin: 0 0 14px; color: #b9dbe0; font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    .profile-photo { width: 148px; height: 148px; justify-self: center; align-self: center; object-fit: cover; border: 4px solid rgba(255,255,255,.84); border-radius: 50%; box-shadow: 0 14px 30px rgba(5, 22, 40, .24); }
+    .hero-meta { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 18px; }
+    .contact-card, .snapshot { min-width: 0; padding: 22px; border: 1px solid rgba(255,255,255,.2); border-radius: 18px; background: rgba(7, 26, 46, .24); backdrop-filter: blur(8px); }
+    .contact-heading { margin: 0 0 12px; color: #b9dbe0; font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    .contact-list { display: grid; gap: 9px; }
+    .contact-line { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; color: #e7f0f5; font-size: 13px; }
+    .contact-line span { color: #b9dbe0; }
+    .contact-line a, .contact-line strong { min-width: 0; overflow-wrap: anywhere; color: #fff; font-weight: 700; }
+    .snapshot { width: 100%; }
     .snapshot-row { display: flex; justify-content: space-between; gap: 20px; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.15); }
     .snapshot-row:first-of-type { border-top: 0; padding-top: 0; }
     .snapshot-row strong { font-size: 22px; line-height: 1; }
@@ -100,18 +105,19 @@
     .award span { flex: 0 0 auto; color: var(--teal); font-size: 12px; font-weight: 750; }
     .course-list { display: grid; gap: 7px; }
     .course { display: flex; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 13px; }
-    .course span:last-child { color: var(--navy); font-weight: 750; }
-
-    footer { padding: 4px 0 42px; color: var(--muted); font-size: 12.5px; text-align: center; }
-    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; }
-    footer a { color: var(--blue); font-weight: 700; }
+    .course span:first-child { min-width: 0; }
+    .course span:last-child { flex: 0 0 auto; color: var(--navy); font-weight: 750; }
 
     @media (max-width: 780px) {
       .hero-grid, .two-col { grid-template-columns: 1fr; gap: 28px; }
+      .hero-meta { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
       .hero { padding: 46px 0 42px; }
       .section { padding: 23px; }
       .topbar-inner { align-items: flex-start; flex-direction: column; gap: 13px; }
       nav { justify-content: flex-start; gap: 10px 15px; }
+    }
+    @media (max-width: 640px) {
+      .hero-meta { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .shell { width: min(100% - 28px, 1120px); }
@@ -144,10 +150,17 @@
         <p class="hero-subtitle">B.S. student in Information and Computing Science · Wuhan University of Technology · Expected 2028</p>
         <p class="hero-copy">Undergraduate student with experience in AI4Science research, deep-learning model training, enterprise database LLM deployment, software engineering, and competitive programming.</p>
       </div>
-      <div class="hero-profile">
-        <img class="profile-photo" src="profile-photo.jpg" alt="Portrait of Xuanwen Zhu" width="148" height="148">
-        <aside class="snapshot" aria-label="Profile snapshot">
-          <p class="snapshot-label">At a glance</p>
+      <img class="profile-photo" src="profile-photo.jpg" alt="Portrait of Xuanwen Zhu" width="148" height="148">
+      <div class="hero-meta">
+        <section class="contact-card" id="contact" aria-label="Contact information">
+          <p class="contact-heading">Contact</p>
+          <div class="contact-list">
+            <div class="contact-line"><span>Email</span><a href="mailto:cruisey2005@outlook.com">cruisey2005@outlook.com</a></div>
+            <div class="contact-line"><span>WeChat</span><strong>CruiseYyy</strong></div>
+            <div class="contact-line"><span>GitHub</span><a href="https://github.com/CruiseYY">github.com/CruiseYY</a></div>
+          </div>
+        </section>
+        <aside class="snapshot" aria-label="Profile facts">
           <div class="snapshot-row"><strong>3.611</strong><span>Cumulative GPA<br>(5.0-scale)</span></div>
           <div class="snapshot-row"><strong>2028</strong><span>Expected graduation</span></div>
           <div class="snapshot-row"><strong>C/C++/Python</strong><span>Programming languages</span></div>
@@ -169,8 +182,11 @@
         <div class="info-card">
           <h3>Selected coursework</h3>
           <div class="course-list" aria-label="Selected coursework">
+            <div class="course"><span>Computer Fundamentals and C Programming Comprehensive Experiment A</span><span>100</span></div>
             <div class="course"><span>C Programming Fundamentals A</span><span>98.8</span></div>
             <div class="course"><span>Advanced Algebra A1</span><span>95.36</span></div>
+            <div class="course"><span>Mathematical Modeling B</span><span>94.0</span></div>
+            <div class="course"><span>Object-Oriented Programming Methods B</span><span>92.8</span></div>
             <div class="course"><span>Beidou Innovation Design and Machine Learning</span><span>92.5</span></div>
           </div>
         </div>
@@ -275,8 +291,5 @@
     </section>
   </main>
 
-  <footer id="contact">
-    <div class="shell contact-links"><a href="mailto:cruisey2005@outlook.com">cruisey2005@outlook.com</a><a href="https://github.com/CruiseYY">github.com/CruiseYY</a></div>
-  </footer>
 </body>
 </html>
