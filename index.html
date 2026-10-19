@@ -99,11 +99,12 @@
     .entry li { margin: 4px 0; }
 
     .two-col { display: grid; grid-template-columns: 1.12fr .88fr; gap: 22px; }
+    #awards .two-col { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .award-list { display: grid; gap: 9px; }
-    .award { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding-bottom: 9px; border-bottom: 1px solid var(--line); }
+    #awards .award { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 12px; padding-bottom: 9px; border-bottom: 1px solid var(--line); }
     .award:last-child { border-bottom: 0; padding-bottom: 0; }
     .award strong { color: var(--navy); font-size: 13.5px; }
-    .award span { flex: 0 0 auto; color: var(--teal); font-size: 12px; font-weight: 750; }
+    #awards .award span { color: var(--teal); font-size: 12px; font-weight: 750; text-align: right; white-space: nowrap; }
     .course-list { display: grid; gap: 7px; }
     .course { display: flex; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 13px; }
     .course span:first-child { min-width: 0; }
@@ -111,6 +112,7 @@
 
     @media (max-width: 780px) {
       .hero-grid, .two-col { grid-template-columns: 1fr; gap: 28px; }
+      #awards .two-col { grid-template-columns: 1fr; }
       .hero-meta { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
       .hero { padding: 46px 0 42px; }
       .section { padding: 23px; }
@@ -125,6 +127,8 @@
       h1 { font-size: 42px; }
       .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
       .award { align-items: flex-start; flex-direction: column; gap: 1px; }
+      #awards .award { display: flex; align-items: flex-start; flex-direction: column; gap: 2px; }
+      #awards .award span { text-align: left; white-space: normal; }
     }
   </style>
 </head>
@@ -271,18 +275,18 @@
         <div class="award-column">
           <p class="section-kicker">ICPC / CCPC rewards</p>
           <div class="award-list">
-            <div class="award"><strong>ICPC Asia Regional Contests</strong><span>2 Gold Medals · 2 Silver Medals</span></div>
+            <div class="award"><strong>ICPC Asia Regionals</strong><span>2 Gold · 2 Silver</span></div>
             <div class="award"><strong>ICPC Asia Regional Finals</strong><span>Bronze Medal</span></div>
-            <div class="award"><strong>ICPC Invitational Contests</strong><span>2 Gold Medals</span></div>
+            <div class="award"><strong>ICPC Invitational Contests</strong><span>2 Gold</span></div>
             <div class="award"><strong>China Collegiate Programming Contest Finals</strong><span>Silver Medal</span></div>
-            <div class="award"><strong>ICPC China Hubei Provincial Programming Contest</strong><span>First Prize</span></div>
-            <div class="award"><strong>ICPC China Wuhan National Invitational Programming Contest</strong><span>Third Prize</span></div>
+            <div class="award"><strong>ICPC Hubei Provincial Contest</strong><span>First Prize</span></div>
+            <div class="award"><strong>ICPC Wuhan National Invitational</strong><span>Third Prize</span></div>
           </div>
         </div>
         <div class="award-column">
           <p class="section-kicker">Other selected rewards</p>
           <div class="award-list">
-            <div class="award"><strong>Huawei Software Challenge · Hubei–Hunan Division</strong><span>Regional Second Prize · Regional Third Prize</span></div>
+            <div class="award"><strong>Huawei Software Challenge · Hubei–Hunan</strong><span>Regional 2nd / 3rd Prize</span></div>
             <div class="award"><strong>Group Programming Ladder Tournament (GPLT)</strong><span>National First Prize</span></div>
             <div class="award"><strong>AI Algorithm Peak Competition</strong><span>National Second Prize</span></div>
             <div class="award"><strong>Statistical Modeling Competition</strong><span>Provincial Second Prize</span></div>
