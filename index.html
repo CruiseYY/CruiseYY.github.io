@@ -3,299 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Xuanwen Zhu — undergraduate student in Information and Computing Science at Wuhan University of Technology.">
-  <meta name="theme-color" content="#13263d">
-  <title>Xuanwen Zhu | Undergraduate Profile</title>
+  <meta name="description" content="Xuanwen Zhu — B.S. candidate in Information and Computing Science at Wuhan University of Technology.">
+  <title>Xuanwen Zhu | Homepage</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #162235;
-      --muted: #5f6d7d;
-      --navy: #13263d;
-      --blue: #245f9e;
-      --teal: #1b8b86;
-      --line: #dbe3ec;
-      --paper: #ffffff;
-      --wash: #f4f7fb;
-      --soft-blue: #edf4fb;
-      --soft-teal: #edf8f6;
-      --shadow: 0 16px 42px rgba(25, 54, 88, 0.09);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--wash);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 15px;
-      line-height: 1.65;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: var(--blue); }
-    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-
-    .topbar {
-      padding: 22px 0 16px;
-      background: var(--paper);
-      border-bottom: 1px solid var(--line);
-    }
-    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { font-weight: 750; letter-spacing: -0.02em; color: var(--navy); }
-    .brand span { display: block; margin-top: 2px; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0.02em; }
-    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; font-size: 13px; color: var(--muted); }
-    nav a { transition: color .2s ease; }
-
-    .hero {
-      padding: 64px 0 54px;
-      color: #fff;
-      background:
-        radial-gradient(circle at 82% 18%, rgba(68, 163, 172, .28), transparent 28%),
-        linear-gradient(135deg, #13263d 0%, #1a3e62 62%, #1d6c77 100%);
-    }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(270px, .85fr); gap: 54px; align-items: center; }
-    .eyebrow { margin: 0 0 14px; color: #a7d7dd; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    h1 { margin: 0; max-width: 780px; font-size: clamp(38px, 6vw, 68px); line-height: 1.02; letter-spacing: -0.055em; font-weight: 770; }
-    .hero-subtitle { margin: 17px 0 0; color: #d8e8f1; font-size: 17px; }
-    .hero-copy { max-width: 680px; margin: 20px 0 0; color: #e7f0f5; font-size: 17px; line-height: 1.72; }
-    .profile-photo { width: 148px; height: 148px; justify-self: center; align-self: center; object-fit: cover; border: 4px solid rgba(255,255,255,.84); border-radius: 50%; box-shadow: 0 14px 30px rgba(5, 22, 40, .24); }
-    .hero-meta { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 18px; }
-    .contact-card, .snapshot { min-width: 0; padding: 22px; border: 1px solid rgba(255,255,255,.2); border-radius: 18px; background: rgba(7, 26, 46, .24); backdrop-filter: blur(8px); }
-    .contact-heading { margin: 0 0 12px; color: #b9dbe0; font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
-    .contact-list { display: grid; gap: 9px; }
-    .contact-line { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; color: #e7f0f5; font-size: 13px; }
-    .contact-line span { color: #b9dbe0; }
-    .contact-line a, .contact-line strong { min-width: 0; overflow-wrap: anywhere; color: #fff; font-weight: 700; }
-    .snapshot { width: 100%; }
-    .snapshot-row { display: flex; justify-content: space-between; gap: 20px; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.15); }
-    .snapshot-row:first-of-type { border-top: 0; padding-top: 0; }
-    .snapshot-row strong { font-size: 22px; line-height: 1; }
-    .snapshot-row span { max-width: 135px; color: #d6e5ec; font-size: 12px; text-align: right; }
-
-    main { padding: 30px 0 62px; }
-    .section { margin-top: 28px; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
-    .section:first-child { margin-top: 0; }
-    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
-    .section-kicker { margin: 0 0 5px; color: var(--teal); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    h2 { margin: 0; color: var(--navy); font-size: 25px; line-height: 1.15; letter-spacing: -.035em; }
-    .section-note { margin: 0; color: var(--muted); font-size: 13px; }
-
-    .info-card { padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, #fff, #f8fbfe); }
-    .info-card h3 { margin: 0 0 9px; color: var(--navy); font-size: 16px; }
-    .info-card p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.75; }
-    .award-definition { margin: 0 0 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .award-column .section-kicker { margin-bottom: 10px; }
-
-    .experience { display: grid; gap: 21px; }
-    .entry { position: relative; padding-left: 22px; }
-    .entry::before { content: ""; position: absolute; top: 7px; bottom: -25px; left: 3px; width: 1px; background: var(--line); }
-    .entry:last-child::before { bottom: 7px; }
-    .entry::after { content: ""; position: absolute; top: 6px; left: 0; width: 7px; height: 7px; border: 2px solid var(--teal); border-radius: 50%; background: var(--paper); }
-    .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 18px; align-items: baseline; }
-    .entry-title { margin: 0; color: var(--navy); font-size: 16px; font-weight: 750; }
-    .entry-meta { color: var(--muted); font-size: 12.5px; }
-    .entry ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 13.5px; }
-    .entry li { margin: 4px 0; }
-
-    .two-col { display: grid; grid-template-columns: 1.12fr .88fr; gap: 22px; }
-    #awards .two-col { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-    .award-list { display: grid; gap: 9px; }
-    #awards .award { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 12px; padding-bottom: 9px; border-bottom: 1px solid var(--line); }
-    .award:last-child { border-bottom: 0; padding-bottom: 0; }
-    .award strong { color: var(--navy); font-size: 13.5px; }
-    #awards .award span { color: var(--teal); font-size: 12px; font-weight: 750; text-align: right; white-space: nowrap; }
-    .course-list { display: grid; gap: 7px; }
-    .course { display: flex; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 13px; }
-    .course span:first-child { min-width: 0; }
-    .course span:last-child { flex: 0 0 auto; color: var(--navy); font-weight: 750; }
-
-    @media (max-width: 780px) {
-      .hero-grid, .two-col { grid-template-columns: 1fr; gap: 28px; }
-      #awards .two-col { grid-template-columns: 1fr; }
-      .hero-meta { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
-      .hero { padding: 46px 0 42px; }
-      .section { padding: 23px; }
-      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 13px; }
-      nav { justify-content: flex-start; gap: 10px 15px; }
-    }
-    @media (max-width: 640px) {
-      .hero-meta { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .shell { width: min(100% - 28px, 1120px); }
-      h1 { font-size: 42px; }
-      .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
-      .award { align-items: flex-start; flex-direction: column; gap: 1px; }
-      #awards .award { display: flex; align-items: flex-start; flex-direction: column; gap: 2px; }
-      #awards .award span { text-align: left; white-space: normal; }
-    }
+    :root{color-scheme:light;--ink:#4b5158;--muted:#6d747b;--soft:#8a9197;--line:#e8eaec;--accent:#2c5d98}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.65}a{color:var(--accent);text-decoration:none}a:hover{color:#173e73;text-decoration:underline}
+    .site-header{border-bottom:1px solid var(--line);background:#fff}.site-nav{width:min(1260px,calc(100% - 48px));min-height:56px;margin:auto;display:flex;align-items:center;gap:34px}.nav-link{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;line-height:1}.nav-link:first-child{font-weight:700}.nav-link:hover{text-decoration:none}.nav-icon{width:17px;height:17px;fill:currentColor}
+    .page-shell{width:min(1260px,calc(100% - 48px));margin:auto;padding:36px 0 72px}.page-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:52px;align-items:start}.sidebar{position:sticky;top:24px;color:var(--muted)}.profile-photo{display:block;width:174px;height:174px;object-fit:cover;border:1px solid #e4e7e9;border-radius:50%}.sidebar h1{margin:13px 0 7px;color:var(--ink);font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.2}.sidebar-school{max-width:180px;margin:0;color:var(--muted);line-height:1.55}.sidebar-degree{margin:22px 0 0;color:var(--muted);font-size:14px}.contact-list{display:grid;gap:9px;margin-top:19px}.contact-item{display:flex;align-items:flex-start;gap:9px;min-width:0;color:var(--muted);font-size:14px}.contact-item a{overflow-wrap:anywhere}.contact-icon{width:16px;flex:0 0 16px;color:var(--soft);text-align:center}
+    .content{min-width:0;max-width:980px}.intro{margin:0 0 43px;color:var(--ink);font-size:15px}.intro p{margin:0 0 11px}.intro p:last-child{margin-bottom:0}.section{margin-top:42px}.section:first-of-type{margin-top:0}.section-heading{display:flex;align-items:center;gap:10px;margin-bottom:13px;padding-bottom:7px;border-bottom:1px solid var(--line)}.section-heading h2{margin:0;color:var(--ink);font-size:21px;font-weight:700;letter-spacing:-.015em;line-height:1.35}.section-mark{color:var(--accent);font-size:19px;line-height:1}.entry-list{display:grid;gap:20px}.entry{min-width:0}.entry-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 18px}.entry-title{margin:0;color:var(--ink);font-size:15px;font-weight:700;line-height:1.45}.entry-meta{color:var(--soft);font-size:13px;line-height:1.45;text-align:right}.entry ul{margin:5px 0 0;padding-left:21px;color:var(--muted);font-size:14px}.entry li{margin:3px 0}.repository{margin:5px 0 0 21px;color:var(--soft);font-size:13px}
+    .education-grid{display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,1.2fr);gap:34px}.education-block h3{margin:0 0 3px;color:var(--ink);font-size:15px}.education-block p{margin:0;color:var(--muted);font-size:14px}.course-list{display:grid;gap:5px 26px;grid-template-columns:repeat(2,minmax(0,1fr))}.course{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px}.course-name{min-width:0}.course-score{flex:0 0 auto;color:var(--ink);font-weight:700}
+    .section-note{margin:-3px 0 13px;color:var(--soft);font-size:13px}.award-group{margin:0 0 9px;color:var(--soft);font-size:13px;font-weight:700}.award-list{display:grid;gap:8px}.award{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:18px;padding-bottom:7px;border-bottom:1px solid #f0f1f2}.award:last-child{padding-bottom:0;border-bottom:0}.award-name{color:var(--ink);font-size:14px}.award-result{color:var(--accent);font-size:13px;font-weight:700;text-align:right;white-space:nowrap}
+    @media(max-width:800px){.site-nav,.page-shell{width:min(100% - 36px,680px)}.page-layout{grid-template-columns:1fr;gap:34px}.sidebar{position:static;display:grid;grid-template-columns:132px minmax(0,1fr);column-gap:22px;align-items:start}.profile-photo{width:132px;height:132px;grid-row:span 4}.sidebar h1{margin-top:0}.sidebar-school{max-width:none}.sidebar-degree{margin-top:11px}.contact-list{grid-column:2;margin-top:12px}.content{max-width:none}}
+    @media(max-width:560px){body{font-size:14px}.site-nav,.page-shell{width:min(100% - 28px,680px)}.site-nav{gap:23px}.page-shell{padding-top:28px}.sidebar{display:block;text-align:center}.profile-photo{margin:auto}.sidebar-school{margin:auto}.sidebar-degree{margin-top:10px}.contact-list{justify-content:center;grid-template-columns:repeat(2,auto);gap:7px 18px;text-align:left}.entry-head{display:block}.entry-meta{display:block;margin-top:2px;text-align:left}.education-grid{grid-template-columns:1fr;gap:18px}.course-list{grid-template-columns:1fr}.award{display:block}.award-result{display:block;margin-top:2px;text-align:left;white-space:normal}}
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="shell topbar-inner">
-      <a class="brand" href="#top">Xuanwen Zhu<span>B.S. candidate · Wuhan University of Technology</span></a>
-      <nav aria-label="Primary navigation">
-        <a href="#profile">Profile</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#awards">Rewards</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute"><symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3.06a15.8 15.8 0 0 0-1.08-5.18A8.03 8.03 0 0 1 18.9 11ZM12 4c.82 1.1 1.55 3.1 1.8 7h-3.6c.25-3.9.98-5.9 1.8-7ZM9.24 5.82A15.8 15.8 0 0 0 8.16 11H5.1a8.03 8.03 0 0 1 4.14-5.18ZM5.1 13h3.06c.18 1.94.58 3.72 1.08 5.18A8.03 8.03 0 0 1 5.1 13ZM12 20c-.82-1.1-1.55-3.1-1.8-7h3.6c-.25 3.9-.98 5.9-1.8 7Zm2.76-1.82A15.8 15.8 0 0 0 15.84 13h3.06a8.03 8.03 0 0 1-4.14 5.18Z"/></symbol></svg>
+  <header class="site-header"><nav class="site-nav" aria-label="Primary navigation"><a class="nav-link" href="#top"><svg class="nav-icon" aria-hidden="true"><use href="#icon-globe"></use></svg>Homepage</a><a class="nav-link" href="#about">About Me</a></nav></header>
+  <main class="page-shell" id="top"><div class="page-layout">
+    <aside class="sidebar" aria-label="Personal information"><img class="profile-photo" src="profile-photo.jpg" alt="Portrait of Xuanwen Zhu" width="174" height="174"><h1>Xuanwen Zhu</h1><p class="sidebar-school">Wuhan University of Technology</p><p class="sidebar-degree">B.S. in Information and Computing Science</p><div class="contact-list"><div class="contact-item"><span class="contact-icon">✉</span><a href="mailto:cruisey2005@outlook.com">Email</a></div><div class="contact-item"><span class="contact-icon">◈</span><a href="https://github.com/CruiseYY">GitHub</a></div><div class="contact-item"><span class="contact-icon">◌</span><span>WeChat: CruiseYyy</span></div></div></aside>
+    <div class="content" id="about">
+      <section class="intro"><p>Hi, I’m Xuanwen Zhu, a B.S. candidate in Information and Computing Science at Wuhan University of Technology.</p><p>My experience spans AI4Science research, enterprise database LLM deployment, software engineering, vector database optimization, and competitive programming.</p></section>
+      <section class="section" id="research"><div class="section-heading"><span class="section-mark">◉</span><h2>Research Experience</h2></div><div class="entry-list"><article class="entry"><div class="entry-head"><h3 class="entry-title">AI4Science Research: Subsurface Pressure Prediction</h3><span class="entry-meta">Research collaboration with Xi’an Jiaotong University · Apr 2026–Sep 2026</span></div><ul><li>Developed research code and trained deep-learning models for subsurface-pressure prediction using a mixture-of-experts (MoE) architecture.</li><li>Contributed to preparing a patent application based on the project results.</li></ul></article></div></section>
+      <section class="section" id="experience"><div class="section-heading"><span class="section-mark">◌</span><h2>Internship and Project Experience</h2></div><div class="entry-list">
+        <article class="entry"><div class="entry-head"><h3 class="entry-title">Enterprise Database LLM Deployment</h3><span class="entry-meta">Collaborative research project with Xi’an Jiaotong University and an enterprise · Apr 2026–Present</span></div><ul><li>Built an end-to-end large language model (LLM) workflow in Dify for enterprise database access within a private intranet environment.</li><li>Implemented tiered user management and differentiated LLM workflows for databases at different permission levels.</li><li>Developed a backend user-management system and integrated web search and personal knowledge base functionality.</li></ul></article>
+        <article class="entry"><div class="entry-head"><h3 class="entry-title">Software Engineering Intern</h3><span class="entry-meta">Huawei Technologies · CJMP / VibeCoding</span></div><ul><li>Contributed to VibeCoding development under the CJMP framework by modifying CJ-UI-related skill definitions.</li><li>Implemented and tested template-based task generation, and authored skill modules for Keels template generation.</li><li>Optimized model-generated outputs for long-running tasks and evaluated the results.</li></ul><p class="repository">Project repository: <a href="https://gitcode.com/CJMP/VibeCoding/tree/main">CJMP / VibeCoding</a></p></article>
+        <article class="entry"><div class="entry-head"><h3 class="entry-title">Vector Database System Acceleration</h3><span class="entry-meta">Huawei Technologies · Engineering project</span></div><ul><li>Optimized the vector database system-acceleration module and more than doubled Hierarchical Navigable Small World (HNSW) index-construction throughput.</li><li>Developed and tested APIs for a HarmonyOS mobile client of the vector database.</li></ul></article>
+        <article class="entry"><div class="entry-head"><h3 class="entry-title">Disk Storage and Retrieval</h3><span class="entry-meta">Huawei Software Challenge</span></div><ul><li>Applied hot/cold data partitioning to the storage component.</li><li>Designed a cost-aware read strategy inspired by dynamic programming and used a greedy policy to skip unnecessary or low-value read requests.</li><li>Improved the read-performance score by 23% through the combined storage and read-strategy optimizations.</li></ul></article>
+      </div></section>
+      <section class="section" id="leadership"><div class="section-heading"><span class="section-mark">◆</span><h2>Leadership and Service</h2></div><article class="entry"><div class="entry-head"><h3 class="entry-title">President, Algorithm Association</h3><span class="entry-meta">Wuhan University of Technology · Apr 2026–Present</span></div><ul><li>Lead programming activities and coordinate problem design and validation for university and Wuhan-area contests.</li><li>Serve as a problem setter and validator for campus and Wuhan-area contests, and lead joint training and selection activities.</li></ul></article></section>
+      <section class="section" id="education"><div class="section-heading"><span class="section-mark">▣</span><h2>Education and Academic Record</h2></div><div class="education-grid"><div class="education-block"><h3>Wuhan University of Technology</h3><p>B.S. in Information and Computing Science<br>Expected graduation: 2028<br>Cumulative GPA: <strong>3.611 / 5.0</strong></p></div><div class="education-block"><h3>Selected Coursework</h3><div class="course-list"><div class="course"><span class="course-name">Comprehensive Experiment in Computer Fundamentals and C Programming (A)</span><span class="course-score">100</span></div><div class="course"><span class="course-name">C Programming Fundamentals A</span><span class="course-score">98.8</span></div><div class="course"><span class="course-name">Advanced Algebra A1</span><span class="course-score">95.36</span></div><div class="course"><span class="course-name">Mathematical Modeling B</span><span class="course-score">94.0</span></div><div class="course"><span class="course-name">Object-Oriented Programming Methods B</span><span class="course-score">92.8</span></div><div class="course"><span class="course-name">Beidou Innovation Design and Machine Learning</span><span class="course-score">92.5</span></div></div></div></div></section>
+      <section class="section" id="awards"><div class="section-heading"><span class="section-mark">★</span><h2>Selected Rewards</h2></div><p class="section-note"><strong>ICPC</strong> stands for International Collegiate Programming Contest. <strong>CCPC</strong> stands for China Collegiate Programming Contest.</p><p class="award-group">ICPC / CCPC rewards</p><div class="award-list"><div class="award"><span class="award-name">ICPC Asia Regional Contests</span><span class="award-result">2 Gold Medals · 2 Silver Medals</span></div><div class="award"><span class="award-name">ICPC Asia Regional Finals</span><span class="award-result">Bronze Medal</span></div><div class="award"><span class="award-name">ICPC Invitational Contests</span><span class="award-result">2 Gold Medals</span></div><div class="award"><span class="award-name">China Collegiate Programming Contest Finals</span><span class="award-result">Silver Medal</span></div><div class="award"><span class="award-name">Hubei Provincial Programming Contest</span><span class="award-result">First Prize</span></div><div class="award"><span class="award-name">Wuhan National Invitational Contest</span><span class="award-result">Third Prize</span></div></div><p class="award-group" style="margin-top:22px">Other selected rewards</p><div class="award-list"><div class="award"><span class="award-name">Huawei Software Challenge · Hubei–Hunan</span><span class="award-result">Regional Second and Third Prizes</span></div><div class="award"><span class="award-name">Group Programming Ladder Tournament (GPLT)</span><span class="award-result">National First Prize</span></div><div class="award"><span class="award-name">AI Algorithm Peak Competition</span><span class="award-result">National Second Prize</span></div><div class="award"><span class="award-name">Statistical Modeling Competition</span><span class="award-result">Provincial Second Prize</span></div><div class="award"><span class="award-name">CACC</span><span class="award-result">Provincial Second Prize</span></div></div></section>
     </div>
-  </header>
-
-  <section class="hero" id="top">
-    <div class="shell hero-grid">
-      <div>
-        <p class="eyebrow">INFORMATION AND COMPUTING SCIENCE · WUHAN UNIVERSITY OF TECHNOLOGY</p>
-        <h1>Xuanwen Zhu</h1>
-        <p class="hero-subtitle">B.S. candidate in Information and Computing Science · Wuhan University of Technology · Expected graduation: 2028</p>
-        <p class="hero-copy">Experience spanning AI4Science research, deep learning, enterprise database large language model (LLM) deployment, software engineering, and competitive programming.</p>
-      </div>
-      <img class="profile-photo" src="profile-photo.jpg" alt="Portrait of Xuanwen Zhu" width="148" height="148">
-      <div class="hero-meta">
-        <section class="contact-card" id="contact" aria-label="Contact information">
-          <p class="contact-heading">Contact</p>
-          <div class="contact-list">
-            <div class="contact-line"><span>Email</span><a href="mailto:cruisey2005@outlook.com">cruisey2005@outlook.com</a></div>
-            <div class="contact-line"><span>WeChat</span><strong>CruiseYyy</strong></div>
-            <div class="contact-line"><span>GitHub</span><a href="https://github.com/CruiseYY">github.com/CruiseYY</a></div>
-          </div>
-        </section>
-        <aside class="snapshot" aria-label="Profile facts">
-          <div class="snapshot-row"><strong>3.611</strong><span>Cumulative GPA<br>(5.0 scale)</span></div>
-          <div class="snapshot-row"><strong>2028</strong><span>Expected graduation</span></div>
-          <div class="snapshot-row"><strong>C/C++/Python</strong><span>Programming languages</span></div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <main class="shell">
-    <section class="section" id="profile">
-      <div class="section-heading">
-        <div><p class="section-kicker">01 / Personal information</p><h2>Education and Academic Record</h2></div>
-      </div>
-      <div class="two-col">
-        <div class="info-card">
-          <h3>Education</h3>
-          <p>Wuhan University of Technology<br>B.S. in Information and Computing Science<br>Expected graduation: 2028<br>Cumulative GPA: <strong>3.611 / 5.0</strong></p>
-        </div>
-        <div class="info-card">
-          <h3>Selected coursework</h3>
-          <div class="course-list" aria-label="Selected coursework">
-            <div class="course"><span>Comprehensive Experiment in Computer Fundamentals and C Programming (A)</span><span>100</span></div>
-            <div class="course"><span>C Programming Fundamentals A</span><span>98.8</span></div>
-            <div class="course"><span>Advanced Algebra A1</span><span>95.36</span></div>
-            <div class="course"><span>Mathematical Modeling B</span><span>94.0</span></div>
-            <div class="course"><span>Object-Oriented Programming Methods B</span><span>92.8</span></div>
-            <div class="course"><span>Beidou Innovation Design and Machine Learning</span><span>92.5</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="section-heading">
-        <div><p class="section-kicker">02 / Research experience</p><h2>Research Experience</h2></div>
-      </div>
-      <div class="experience">
-        <article class="entry">
-          <div class="entry-head"><h3 class="entry-title">AI4Science Research: Subsurface Pressure Prediction</h3><span class="entry-meta">Research collaboration with Xi’an Jiaotong University · Apr 2026–Sep 2026</span></div>
-          <ul>
-            <li>Developed research code and trained deep-learning models for subsurface-pressure prediction using a mixture-of-experts (MoE) architecture.</li>
-            <li>Contributed to preparing a patent application based on the project results.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="section-heading">
-        <div><p class="section-kicker">03 / Internships and projects</p><h2>Internship and Project Experience</h2></div>
-      </div>
-      <div class="experience">
-        <article class="entry">
-          <div class="entry-head"><h3 class="entry-title">Enterprise Database LLM Deployment</h3><span class="entry-meta">Collaborative research project with Xi’an Jiaotong University and an enterprise · Apr 2026–Present</span></div>
-          <ul>
-            <li>Built an end-to-end large language model (LLM) workflow in Dify for enterprise database access within a private intranet environment.</li>
-            <li>Implemented tiered user management and differentiated LLM workflows for databases at different permission levels.</li>
-            <li>Developed a backend user-management system and integrated web search and personal knowledge base functionality.</li>
-          </ul>
-        </article>
-        <article class="entry">
-          <div class="entry-head"><h3 class="entry-title">Software Engineering Intern</h3><span class="entry-meta">Huawei Technologies · CJMP / VibeCoding</span></div>
-          <ul>
-            <li>Contributed to VibeCoding development under the CJMP framework by modifying CJ-UI-related skill definitions.</li>
-            <li>Implemented and tested template-based task generation, and authored skill modules for Keels template generation.</li>
-            <li>Optimized model-generated outputs for long-running tasks and evaluated the results.</li>
-          </ul>
-          <p class="section-note">Project repository: <a href="https://gitcode.com/CJMP/VibeCoding/tree/main">CJMP / VibeCoding</a></p>
-        </article>
-        <article class="entry">
-          <div class="entry-head"><h3 class="entry-title">Vector Database System Acceleration</h3><span class="entry-meta">Huawei Technologies · Engineering project</span></div>
-          <ul>
-            <li>Optimized the vector database system-acceleration module and more than doubled Hierarchical Navigable Small World (HNSW) index-construction throughput.</li>
-            <li>Developed and tested APIs for a HarmonyOS mobile client of the vector database.</li>
-          </ul>
-        </article>
-        <article class="entry">
-          <div class="entry-head"><h3 class="entry-title">Disk Storage and Retrieval</h3><span class="entry-meta">Huawei Software Challenge</span></div>
-          <ul>
-            <li>Applied hot/cold data partitioning to the storage component.</li>
-            <li>Designed a cost-aware read strategy inspired by dynamic programming and used a greedy policy to skip unnecessary or low-value read requests.</li>
-            <li>Improved the read-performance score by 23% through the combined storage and read-strategy optimizations.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="leadership">
-      <div class="section-heading">
-        <div><p class="section-kicker">04 / Leadership and service</p><h2>Leadership and Service</h2></div>
-      </div>
-      <article class="entry">
-        <div class="entry-head"><h3 class="entry-title">President, Algorithm Association</h3><span class="entry-meta">Wuhan University of Technology · Apr 2026–Present</span></div>
-        <ul>
-          <li>Lead programming activities and coordinate problem design and validation for university and Wuhan-area contests.</li>
-          <li>Serve as a problem setter and validator for campus and Wuhan-area contests, and lead joint training and selection activities.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section" id="awards">
-      <div class="section-heading">
-        <div><p class="section-kicker">05 / Competition rewards</p><h2>Selected Rewards</h2></div>
-      </div>
-      <p class="award-definition"><strong>ICPC</strong> stands for International Collegiate Programming Contest.<br><strong>CCPC</strong> stands for China Collegiate Programming Contest.</p>
-      <div class="two-col">
-        <div class="award-column">
-          <p class="section-kicker">ICPC / CCPC rewards</p>
-          <div class="award-list">
-            <div class="award"><strong>ICPC Asia Regional Contests</strong><span>2 Gold Medals · 2 Silver Medals</span></div>
-            <div class="award"><strong>ICPC Asia Regional Finals</strong><span>Bronze Medal</span></div>
-            <div class="award"><strong>ICPC Invitational Contests</strong><span>2 Gold Medals</span></div>
-            <div class="award"><strong>China Collegiate Programming Contest Finals</strong><span>Silver Medal</span></div>
-            <div class="award"><strong>Hubei Provincial Programming Contest</strong><span>First Prize</span></div>
-            <div class="award"><strong>Wuhan National Invitational Contest</strong><span>Third Prize</span></div>
-          </div>
-        </div>
-        <div class="award-column">
-          <p class="section-kicker">Other selected rewards</p>
-          <div class="award-list">
-            <div class="award"><strong>Huawei Software Challenge · Hubei–Hunan</strong><span>Regional Second and Third Prizes</span></div>
-            <div class="award"><strong>Group Programming Ladder Tournament (GPLT)</strong><span>National First Prize</span></div>
-            <div class="award"><strong>AI Algorithm Peak Competition</strong><span>National Second Prize</span></div>
-            <div class="award"><strong>Statistical Modeling Competition</strong><span>Provincial Second Prize</span></div>
-            <div class="award"><strong>CACC</strong><span>Provincial Second Prize</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  </div></main>
 </body>
 </html>
