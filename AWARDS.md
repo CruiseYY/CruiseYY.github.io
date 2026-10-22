@@ -16,7 +16,7 @@ This file is an internal archive of Xuanwen Zhu's competition awards. It is not 
 | Group Programming Ladder Tournament (GPLT) | National First Prize | — | — | Current profile records |
 | AI Algorithm Peak Competition | National Second Prize | — | — | Current profile records |
 | Statistical Modeling Competition | Provincial Second Prize | — | — | Current profile records |
-| CACC | Provincial Second Prize | — | — | [CACC official website](https://cacc.ccf.org.cn/#/home) |
+| CCF Algorithm Capability Competition (CACC) | Provincial Second Prize | — | — | [CACC official website](https://cacc.ccf.org.cn/#/home) |
 
 ## Local Evidence Files
 
