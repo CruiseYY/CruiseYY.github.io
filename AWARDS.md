@@ -8,7 +8,7 @@ This file is an internal archive of Xuanwen Zhu's competition awards. It is not 
 |---|---|---:|---:|---|
 | ICPC Asia Regional Contests | Gold Medal; Silver Medal | 2 Gold, 2 Silver | — | Current profile records; certificate files available locally |
 | ICPC Asia Regional Finals | Bronze Medal | — | — | Current profile records |
-| ICPC Wuhan Invitational Contest | Gold Medal (3rd Place) | Previous archive records 2 Gold across ICPC Invitational Contests; 3rd Place refers to the Wuhan contest | — | User clarification on 2026-11-17: merge the Wuhan and ICPC invitational entries; exact edition and official title to confirm |
+| ICPC Invitational Contests | Gold Medal (3rd Place) | Previous archive records 2 Gold across ICPC Invitational Contests; 3rd Place refers to the Wuhan contest | — | User clarification on 2026-11-17: merge the Wuhan and ICPC invitational entries and omit the location from the display name; exact edition and official title to confirm |
 | China Collegiate Programming Contest (CCPC) Regional Contests | Gold Medal | — | — | User update on 2026-11-17; exact regional site and competition year to confirm |
 | China Collegiate Programming Contest (CCPC) Finals | Silver Medal | — | — | Current profile records; CCPC certificate image available locally |
 | Hubei Provincial Programming Contest | First Prize | — | — | Current profile records; placement certificate available locally |
